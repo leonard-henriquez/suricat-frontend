@@ -1,5 +1,5 @@
-import React from 'react';
-import './CompOne.css';
+import React from 'react'
+import './CompOne.css'
 
 const CompOne = () => (
 	<div className="Comp">
@@ -10,6 +10,6 @@ const CompOne = () => (
 			  Comp One
 		</h3>
 	</div>
-);
+)
 
-export default CompOne;
+export default CompOne

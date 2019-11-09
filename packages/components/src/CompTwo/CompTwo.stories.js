@@ -1,6 +1,6 @@
-import React from 'react';
-import {storiesOf} from '@storybook/react';
+import React from 'react'
+import { storiesOf } from '@storybook/react'
 
-import CompTwo from '.';
+import CompTwo from '.'
 
-storiesOf('CompTwo', module).add('Default', () => <CompTwo />);
+storiesOf('CompTwo', module).add('Default', () => <CompTwo />)

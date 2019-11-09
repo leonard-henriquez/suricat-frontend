@@ -7,7 +7,7 @@
   },
   "workspaces": {
     "packages": [
-      "packages/apps/*",
+      "packages/*",
       "packages/components",
       "packages/storybook"
     ],

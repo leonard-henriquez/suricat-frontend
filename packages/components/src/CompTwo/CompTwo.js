@@ -1,5 +1,5 @@
-import React from 'react';
-import './CompTwo.css';
+import React from 'react'
+import './CompTwo.css'
 
 const CompTwo = () => (
 	<div className="Comp">
@@ -10,6 +10,6 @@ const CompTwo = () => (
 			Comp Two
 		</h3>
 	</div>
-);
+)
 
-export default CompTwo;
+export default CompTwo
