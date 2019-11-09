@@ -1,5 +1,5 @@
 import React from 'react'
-import './CompTwo.css'
+// import './CompTwo.css'
 
 const CompTwo = () => (
 	<div className="Comp">
