@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import CompTwo from '.'
+import { CompTwo } from '@project/components'
 
 storiesOf('CompTwo', module).add('Default', () => <CompTwo />)

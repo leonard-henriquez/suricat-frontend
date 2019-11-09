@@ -1,14 +1,10 @@
 import { addParameters, configure } from '@storybook/react'
-import { themes } from '@storybook/theming'
+import theme from './theme'
 
 addParameters({
 	options: {
-		theme: themes.dark,
+		theme: theme,
 	},
 })
 
-const comps = require.context('@project/components/src', true, /.stories.js$/)
-
-configure(() => {
-	comps.keys().forEach(filename => comps(filename))
-}, module)
+configure(require.context('../stories', true, /\.stories\.jsx?$/), module)
