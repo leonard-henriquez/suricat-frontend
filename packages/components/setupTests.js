@@ -1,6 +1,4 @@
 /* eslint-disable */
-// SetupTests.js - Imports globals into Jest tests
-
 require('jest-prop-type-error')
 
 const enzyme = require('enzyme')

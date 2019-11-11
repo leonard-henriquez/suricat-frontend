@@ -16,13 +16,15 @@
     "nohoist": [
       "**/webpack",
       "**/webpack-dev-server",
-      "**/babel-loader",
-      "**/babel-jest"
+      "**/babel-loader"
     ]
   },
   "devDependencies": {
     "@babel/helper-plugin-utils": "^7.0.0",
     "babel-eslint": "10.0.1",
+    "babel-jest": "^24.9.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.5.0",
@@ -32,16 +34,8 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "jest-prop-type-error": "^1.1.0",
+    "jest-transform-file": "^1.1.1",
     "lerna": "^3.10.7",
     "prettier": "^1.16.1"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!src/setupTests.{js,jsx}",
-      "!src/index.{js,jsx}",
-      "!src/serviceWorker.{js,jsx}",
-      "!src/**/*.(spec|test|stories).{js,jsx}"
-    ]
   }
 }
