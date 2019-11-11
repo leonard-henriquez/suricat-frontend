@@ -7,7 +7,6 @@
     "start": "webpack-dev-server --open",
     "build": "webpack --mode production --devtool false",
     "test": "jest",
-    "lint": "eslint ./src/**/*.js --max-warnings=0 --format=codeframe",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d dist"
   },
@@ -38,6 +37,13 @@
         "functions": 98,
         "lines": 98
       }
+    },
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
     }
   },
   "dependencies": {
@@ -45,8 +51,8 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "gh-pages": "^2.0.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",

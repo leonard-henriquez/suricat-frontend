@@ -1,6 +1,5 @@
 import resolve from 'rollup-plugin-node-resolve'
 import babel from 'rollup-plugin-babel'
-import commonjs from 'rollup-plugin-commonjs'
 
 import pkg from './package.json'
 
@@ -19,17 +18,19 @@ export default {
 			file: pkg.browser,
 			format: 'umd',
 			name: pkg.name,
+			globals: {
+				react: 'React',
+				'react-dom': 'ReactDOM',
+				'prop-types': 'PropTypes',
+			},
 		},
 	],
-	external: ['react', 'react-dom'],
+	external: ['react', 'react-dom', 'prop-types'],
 	plugins: [
-		// Allow to include all kind of amd package in an ES6 way
-		commonjs({
-			include: 'node_modules/**',
+		// Say to rollup how to resolve node dependencies
+		resolve({
 			extensions: ['.js', '.jsx', '.json'],
 		}),
-		// Say to rollup how to resolve node dependencies
-		resolve(),
 		// Babel
 		babel({
 			exclude: 'node_modules/**',

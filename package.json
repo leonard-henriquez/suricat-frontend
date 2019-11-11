@@ -2,7 +2,11 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "test": "FORCE_COLOR=true lerna run lint && CI=true FORCE_COLOR=true lerna run test -- --coverage",
+    "clean": "lerna clean && rimraf ./node_modules",
+    "clean:fix": "yarn clean && rimraf ./yarn.lock ./package-lock.json && yarn bootstrap",
+    "bootstrap": "yarn install && lerna bootstrap",
+    "lint": "eslint ./packages/**/*.js --max-warnings=0 --format=codeframe",
+    "test": "CI=true FORCE_COLOR=true lerna run test -- --coverage",
     "deploy": "FORCE_COLOR=true lerna run deploy"
   },
   "workspaces": {
@@ -10,14 +14,16 @@
       "packages/*"
     ],
     "nohoist": [
+      "**/webpack",
       "**/webpack-dev-server",
       "**/babel-loader",
       "**/babel-jest"
     ]
   },
   "devDependencies": {
+    "@babel/helper-plugin-utils": "^7.0.0",
     "babel-eslint": "10.0.1",
-    "eslint": "^6.6.0",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-import": "^2.18.2",
